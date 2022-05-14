@@ -95,7 +95,9 @@ app.use('/', userRoutes)
 app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', reviewRoutes)
 
-app.listen(3000, () => {
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
   console.log('Serving on port 3000')
 });
 
